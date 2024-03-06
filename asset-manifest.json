@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/resource-allocation/static/css/main.f9495a5d.css",
+    "main.js": "/resource-allocation/static/js/main.affe373e.js",
+    "index.html": "/resource-allocation/index.html",
+    "main.f9495a5d.css.map": "/resource-allocation/static/css/main.f9495a5d.css.map",
+    "main.affe373e.js.map": "/resource-allocation/static/js/main.affe373e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f9495a5d.css",
+    "static/js/main.affe373e.js"
+  ]
+}
