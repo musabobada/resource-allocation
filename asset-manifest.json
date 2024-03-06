@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/resource-allocation/static/css/main.f9495a5d.css",
-    "main.js": "/resource-allocation/static/js/main.affe373e.js",
+    "main.js": "/resource-allocation/static/js/main.0d214a3f.js",
     "index.html": "/resource-allocation/index.html",
     "main.f9495a5d.css.map": "/resource-allocation/static/css/main.f9495a5d.css.map",
-    "main.affe373e.js.map": "/resource-allocation/static/js/main.affe373e.js.map"
+    "main.0d214a3f.js.map": "/resource-allocation/static/js/main.0d214a3f.js.map"
   },
   "entrypoints": [
     "static/css/main.f9495a5d.css",
-    "static/js/main.affe373e.js"
+    "static/js/main.0d214a3f.js"
   ]
 }
