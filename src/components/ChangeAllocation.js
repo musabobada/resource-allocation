@@ -3,7 +3,7 @@ import { AppContext } from "../context/AppContext";
 const ChangeAllocation = (props) => {
   const { dispatch, allocations, currency } = useContext(AppContext);
   const [department, setDepartment] = useState("Marketing");
-  const [budget, setBudget] = useState(0);
+  const [budget, setBudget] = useState(500);
   const [action, setAction] = useState("Add");
 
   const submitEvent = (e) => {

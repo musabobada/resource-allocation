@@ -3,7 +3,10 @@ import React, { createContext, useReducer } from "react";
 export const AppReducer = (state, action) => {
   switch (action.type) {
     case "ADD":
-      if (action.payload.budget > state.remaining) return { ...state };
+      if (action.payload.budget > state.remaining) {
+        alert(`the value shuld not exeed the ${state.currency} ${state.remaining}`);
+        return { ...state };
+      }
       const updatedAllocations = state.allocations.map((allocation) => {
         if (allocation.name === action.payload.department) {
           return { ...allocation, budget: allocation.budget + action.payload.budget };
@@ -18,7 +21,10 @@ export const AppReducer = (state, action) => {
     case "REDUCE":
       const updated = state.allocations.map((allocation) => {
         if (allocation.name === action.payload.department) {
-          if (action.payload.budget > allocation.budget) return allocation;
+          if (action.payload.budget > allocation.budget) {
+            alert(`the value shuld not exeed the ${state.currency} ${allocation.budget}`);
+            return allocation;
+          }
           return { ...allocation, budget: allocation.budget - action.payload.budget };
         } else {
           return allocation;
@@ -63,6 +69,18 @@ export const AppReducer = (state, action) => {
         ...state,
       };
     case "budget":
+      if (action.payload.budget > 20000) {
+        alert(`budget value shouldn't exceed 20000`);
+        return {
+          ...state,
+        };
+      }
+      if (action.payload.budget < state.totalAllocation) {
+        alert(`budget value shouldn't be lower than the spending ${state.totalAllocation}`);
+        return {
+          ...state,
+        };
+      }
       state.budget = action.payload.budget;
       return {
         ...state,
@@ -73,14 +91,14 @@ export const AppReducer = (state, action) => {
 };
 const initialState = {
   allocations: [
-    { id: "Marketing", name: "Marketing", budget: 200 },
-    { id: "Finane", name: "Finane", budget: 10 },
-    { id: "Sales", name: "Sales", budget: 50 },
-    { id: "Human Resource", name: "Human Resource", budget: 55 },
-    { id: "IT", name: "IT", budget: 30 },
+    { id: "Marketing", name: "Marketing", budget: 50 },
+    { id: "Finane", name: "Finane", budget: 300 },
+    { id: "Sales", name: "Sales", budget: 70 },
+    { id: "Human Resource", name: "Human Resource", budget: 40 },
+    { id: "IT", name: "IT", budget: 500 },
   ],
-  currency: "$",
-  budget: "1000",
+  currency: "£",
+  budget: "2000",
 };
 export const AppContext = createContext();
 export const AppProvider = (props) => {

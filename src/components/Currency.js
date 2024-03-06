@@ -12,8 +12,8 @@ const Currency = () => {
         Currency
         {
           <select name="Location" id="Location" onChange={handleChange}>
-            <option value="$">$ Dollar</option>
             <option value="£">£ Pound</option>
+            <option value="$">$ Dollar</option>
             <option value="€">€ Euro</option>
             <option value="₹">₹ Ruppee</option>
           </select>
